@@ -1,0 +1,106 @@
+:root {
+  --blue: #0021a5;
+  --orange: #fa4616;
+  --bg: #f7f7f8;
+  --card-bg: #ffffff;
+  --border: #e2e2e6;
+  --text: #1a1a1f;
+  --muted: #6b6b76;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  background: var(--blue);
+  color: white;
+  padding: 24px 32px;
+}
+
+header h1 { margin: 0 0 4px; font-size: 1.5rem; }
+.subtitle { margin: 0; color: #cdd6f4; font-size: 0.9rem; }
+
+main { max-width: 1100px; margin: 0 auto; padding: 24px 32px 64px; }
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.controls input, .controls select {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+#search { flex: 1 1 260px; }
+
+.controls button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: var(--orange);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.controls button:hover { opacity: 0.9; }
+
+.results-count { color: var(--muted); font-size: 0.85rem; margin-bottom: 12px; }
+
+.results { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.card h3 { margin: 0 0 2px; font-size: 1.05rem; }
+.card .title { color: var(--muted); font-size: 0.85rem; margin-bottom: 8px; }
+.card .org { font-weight: 600; margin-bottom: 4px; }
+.card .meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 10px; }
+
+.tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #eef0fb;
+  color: var(--blue);
+  margin-right: 6px;
+}
+
+.contact-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+
+.contact-row a, .contact-row button {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #fafafa;
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+}
+.contact-row a:hover, .contact-row button:hover { background: #eee; }
+
+.source {
+  font-size: 0.72rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
+}
+.source a { color: var(--muted); }
+
+.empty-state { color: var(--muted); padding: 40px 0; text-align: center; }

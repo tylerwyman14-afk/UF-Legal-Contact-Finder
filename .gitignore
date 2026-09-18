@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# Database (regenerable from data/research/*.json via scripts/seed_from_json.py)
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+
+# VS Code / Windows
+.vscode/
+Thumbs.db
+desktop.ini
